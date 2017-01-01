@@ -28,7 +28,8 @@
                  type="digit"
                  placeholder="请输入狗狗的体重"
                  bindinput="weightInput"
-                 value="{{weight}}"/>
+                 value="{{weight}}"
+                 focus/>
         </view>
       </view>
 

@@ -109,10 +109,11 @@ Page({
     if (this.data.food.total === null) {
       return;
     }
+    const noonValue = 0 / 9;
     const plan = [
-      { key: 'morning', value: 3 / 8 },
-      { key: 'noon', value: 2 / 8 },
-      { key: 'evening', value: 3 / 8 },
+      { key: 'morning', value: (1 - noonValue) / 2 },
+      { key: 'noon', value: noonValue },
+      { key: 'evening', value: (1 - noonValue) / 2 },
     ];
     plan.forEach(({ key, value }) => {
       const detailTotal = Math.round(this.data.food.total * value);
