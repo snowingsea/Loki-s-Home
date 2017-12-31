@@ -1,0 +1,30 @@
+{
+  "name": "LokiHome",
+  "version": "1.0.0",
+  "description": "Loki的各种小工具",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowingsea/LokiHome.git"
+  },
+  "keywords": [],
+  "author": "snowingsea<snowingsea@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snowingsea/LokiHome/issues"
+  },
+  "homepage": "https://github.com/snowingsea/LokiHome#readme",
+  "scripts": {
+    "init": "validate-commit-msg"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "validate-commit-message": "^3.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

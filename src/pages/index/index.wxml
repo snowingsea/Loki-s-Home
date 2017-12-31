@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">Loki信息</view>
+    <view class="weui-cells weui-cells_after-title">
+
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">年龄</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="onAgeChange"
+                  value="{{ageIndex}}"
+                  range="{{ageScopes}}">
+            <view class="weui-select weui-select_in-select-after">
+              {{ageScopes[ageIndex]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">体重（kg）</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input"
+                 type="digit"
+                 placeholder="请输入狗狗的体重"
+                 bindinput="weightInput"
+                 value="{{weight}}"/>
+        </view>
+      </view>
+
+    </view>
+
+     <view class="weui-form-preview" wx:if="{{food.total}}"> 
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">建议口粮</view>
+          <view class="weui-form-preview__value_in-hd">
+            {{ food.total }} g
+          </view>
+        </view>
+      </view>
+
+
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">早上</view>
+          <view class="weui-form-preview__value">
+            {{ food.detail.morning.large }} g（大）
+          </view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label"></view>
+          <view class="weui-form-preview__value">
+            {{ food.detail.morning.small }} g（小）
+          </view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">中午</view>
+          <view class="weui-form-preview__value">
+            {{ food.detail.noon.large }} g（大）
+          </view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label"></view>
+          <view class="weui-form-preview__value">
+            {{ food.detail.noon.small }} g（小）
+          </view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label">晚上</view>
+          <view class="weui-form-preview__value">
+            {{ food.detail.evening.large }} g（大）
+          </view>
+        </view>
+        <view class="weui-form-preview__item">
+          <view class="weui-form-preview__label"></view>
+          <view class="weui-form-preview__value">
+            {{ food.detail.evening.small }} g（小）
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
